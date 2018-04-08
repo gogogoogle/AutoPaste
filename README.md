@@ -1,0 +1,2 @@
+# AutoPaste
+test python project
