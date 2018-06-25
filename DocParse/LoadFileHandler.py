@@ -1,4 +1,4 @@
-class FileContainer:
-    def __init__(self, sourcePath, format):
-        self.filePath = sourcePath
-        self.format   = format
+import re
+def forTestFunction(fileName):
+    fileType = re.findall(r'\.[^\.]*$', fileName)
+    print(fileType)
