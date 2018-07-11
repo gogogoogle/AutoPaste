@@ -1,9 +1,10 @@
 import re
 
 def forTestFunction(fileName):
-    fileType = re.findall(r'\.[^\.]*$', fileName)
-    print(fileType)
-'''class FileContainer:
+    fileType = re.search(r'\.[^\.]*$', fileName)
+    print(fileType.group(0))
+
+class FileContainer:
     def __init__(self, sourcePath, format=0):
         if (format == 0):
             fileType = re.search('\.[^\.]+$', sourcePath)
@@ -15,4 +16,6 @@ def forTestFunction(fileName):
         self.content = open(self.filePath, "r")
         for line in self.content.readlines():
             print(line, end='')
-'''
+
+    #def closeFile(self):
+
